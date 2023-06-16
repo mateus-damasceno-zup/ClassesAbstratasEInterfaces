@@ -11,6 +11,6 @@ public class Circulo extends Forma{
     }
 
     public double calcularArea() {
-        return 2*pi*getRaio();
+        return pi*Math.pow(getRaio(),2);
     }
 }
