@@ -1,15 +1,17 @@
 package Exercicio01_interface;
 
-public class FabricaLampada implements Lampada{
+public class FabricaLampada {
 
-
-    @Override
-    public void ligar() {
-        System.out.println("lampada ligou");
+    public Object construir(String tipoLampada){
+        if(tipoLampada.equalsIgnoreCase("Fluorescente")) {
+            return new Fluorescente();
+        }
+        else if (tipoLampada.equalsIgnoreCase("Incandescente")){
+            return new Incandescente();
+        }else{
+            return null;
+        }
     }
 
-    @Override
-    public void desligar() {
-        System.out.println("lampada desligou");
-    }
+
 }
