@@ -14,6 +14,8 @@ public abstract class Conta implements Tributo{
         this.conta = conta;
         this.nomeCliente = nomeCliente;
         this.saldo = saldo;
+        this.taxa = taxa;
+        this.tipoConta = tipoConta;
     }
 
     public int getConta() {
@@ -58,6 +60,17 @@ public abstract class Conta implements Tributo{
 
     @Override
     public double tributos() {
-        return getSaldo()* taxa;
+        return getSaldo()*getTaxa();
+    }
+
+    @Override
+    public String toString() {
+        return "Conta{" +
+                "tipoConta='" + tipoConta + '\'' +
+                ", conta=" + conta +
+                ", nomeCliente='" + nomeCliente + '\'' +
+                ", saldo=" + saldo +
+                ", taxa=" + taxa +
+                '}';
     }
 }

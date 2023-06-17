@@ -9,6 +9,6 @@ public class SeguroDeVida extends Conta implements Tributo{
 
     @Override
     public double tributos() {
-        return 42.0;
+        return getTaxa();
     }
 }

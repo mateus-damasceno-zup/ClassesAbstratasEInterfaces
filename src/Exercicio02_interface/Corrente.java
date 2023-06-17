@@ -7,9 +7,5 @@ public class Corrente extends Conta implements Tributo{
         super(conta, nomeCliente, tipoConta, saldo, taxa);
     }
 
-    @Override
-    public double tributos() {
-        double taxa = 0.1;
-        return getSaldo()*taxa;
-    }
+
 }
